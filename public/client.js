@@ -1,3 +1,10 @@
+const eventSource = new EventSource('/events');
+
+eventSource.onmessage = (event) => {
+    const summary = JSON.parse(event.data);
+    console.log('Batch Summary:', summary);
+};
+
 const sendEvent = async (type, details) => {
     try {
         const res = await fetch('/log', {
