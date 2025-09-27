@@ -13,10 +13,10 @@ const sendEvent = async (type, details) => {
 };
 
 document.getElementById('actionBtn').addEventListener('click', () => {
-    sendEvent('button_click', 'User clicked the main button')
+    sendEvent('button_click', 'User clicked the main button');
 });
 
 document.getElementById('demoForm').addEventListener('submit', e => {
     e.preventDefault();
     sendEvent('form_submit', 'User submitted the form');
-})
+});
